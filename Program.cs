@@ -52,6 +52,7 @@ class Program
                     break;
                 case 3:
                     Console.WriteLine("\n3.Ada göre ara seçtiniz\n");
+                    KitapArama(kitapListesi);
                     break;
                 case 4:
                     Console.WriteLine("\n4.Çıkış seçtiniz\n");
@@ -131,6 +132,33 @@ class Program
     
     }
 
+
+    public static void KitapArama(List<Kitap> kitaplar) {
+
+
+        Console.Write("\nAd:");
+        string? ad = Console.ReadLine();
+
+
+        bool bulunduMu = false;
+        foreach(Kitap k in kitaplar)
+        {
+
+            if (k.Ad == ad) 
+            {
+                Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
+                bulunduMu = true;
+            }
+
+        }
+
+        if (bulunduMu == false) 
+        {
+            Console.WriteLine("Böyle bir ad bulunamadı");
+        }
+        
+
+    }
 
 
 }
