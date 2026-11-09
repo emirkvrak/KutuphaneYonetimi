@@ -126,8 +126,15 @@ class Program
     
     public static void KitaplariListele(List<Kitap> kitaplar) 
     {
+
         
-        foreach(Kitap k in kitaplar) 
+        if (kitaplar.Count == 0)
+        {
+            Console.Write("\nListe boş\n");
+            return;
+        }
+
+        foreach (Kitap k in kitaplar) 
         {
             Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
         }
@@ -136,6 +143,12 @@ class Program
 
 
     public static void KitapArama(List<Kitap> kitaplar) {
+
+        if (kitaplar.Count == 0)
+        {
+            Console.Write("\nListe boş\n");
+            return;
+        }
 
 
         Console.Write("\nAd:");
