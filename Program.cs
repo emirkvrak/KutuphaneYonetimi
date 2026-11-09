@@ -4,6 +4,8 @@ namespace Kutuphane;
 
 class Program
 {
+
+    
     static void Main()
     {
 
@@ -44,7 +46,7 @@ class Program
 
                 case 1:
                     Console.WriteLine("\n1.Kitap ekle seçtiniz\n");
-                    KitapEkle(id, kitapListesi);
+                    KitapEkle(++id ,kitapListesi);
                     break;
                 case 2:
                     Console.WriteLine("\n2.Kitapları listele seçtiniz\n");
@@ -65,10 +67,10 @@ class Program
         }
     }
 
-    public static void KitapEkle(int id, List<Kitap> kitaplar)
+    public static void KitapEkle(int id ,List<Kitap> kitaplar)
     {
-        id++;
 
+        
         Console.WriteLine("\nLütfen sırasıyla eklemek istediğiniz kitabın bilgilerini girin:\n");
 
         Console.Write("\nAd:");
