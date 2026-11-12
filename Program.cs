@@ -148,7 +148,8 @@ class Program
 
         foreach (Kitap k in kitaplar) 
         {
-            Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
+            
+            KitapYazdir(k);
         }
     
     }
@@ -172,7 +173,8 @@ class Program
         {
 
             if (string.Equals(k.Ad, ad, StringComparison.OrdinalIgnoreCase)) {
-                Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
+                
+                KitapYazdir(k);
                 bulunduMu = true;
             }
 
@@ -184,6 +186,14 @@ class Program
         }
         
 
+    }
+
+
+
+
+    public static void KitapYazdir(Kitap k) {
+
+        Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
     }
 
 
