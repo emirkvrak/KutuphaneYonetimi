@@ -11,8 +11,8 @@ class Program
 
         List<Kitap> kitapListesi = new List<Kitap>
         {
-            new() { Id = 1, Ad = "Nutuk", Yazar = "Mustafa Kemal Atatürk", Fiyat= 150, OduncteMi = false},
-            new() { Id = 2, Ad = "Suç ve Ceza", Yazar = "Dostoyevski", Fiyat= 100, OduncteMi = false}
+            new() { Id = 1, Ad = "Nutuk", Yazar = "Mustafa Kemal Atatürk", Fiyat= 150m, OduncteMi = false},
+            new() { Id = 2, Ad = "Suç ve Ceza", Yazar = "Dostoyevski", Fiyat= 100m, OduncteMi = false}
         };
 
         int id = 2;
@@ -79,13 +79,13 @@ class Program
         Console.Write("\nYazar:");
         string? yazar = Console.ReadLine();
 
-        int fiyat = 0;
+        decimal fiyat = 0.0m;
         while (true) 
         {
             Console.Write("\nFiyat:");
             string? input = Console.ReadLine();
 
-            if (int.TryParse(input, out fiyat)) 
+            if (decimal.TryParse(input, out fiyat)) 
             {
                 break;
             }

@@ -7,7 +7,7 @@ namespace Kutuphane
         public int Id { get; set;}
         public string? Ad;
         public string? Yazar;
-        public int Fiyat;
+        public decimal Fiyat;
         public bool OduncteMi;
 
     }
