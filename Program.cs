@@ -20,10 +20,11 @@ class Program
         while (true)
         {
             Console.Write("\nLütfen bir seçenek secin :\n" +
-                          "1.Kitap ekle \n" +
-                          "2.Kitapları listele \n" +
-                          "3.Ada göre ara \n" +
-                          "4.Çıkış\n" +
+                          "1.Kitap ekle\n" +
+                          "2.Kitapları listele\n" +
+                          "3.Ada göre ara\n" +
+                          "4.Ödünç durumu değiştir\n" +
+                          "5.Çıkış\n" +
                           "Seçiminiz:");
 
             string? input = Console.ReadLine();
@@ -57,7 +58,11 @@ class Program
                     KitapArama(kitapListesi);
                     break;
                 case 4:
-                    Console.WriteLine("\n4.Çıkış seçtiniz\n");
+                    Console.WriteLine("\n4.Ödünç durumu değiştir seçtiniz\n");
+                    KitapOduncDegistir(kitapListesi);
+                    break;
+                case 5:
+                    Console.WriteLine("\n5.Çıkış seçtiniz\n");
                     return;
                 default:
                     Console.WriteLine("\nGeçerli bir rakam girin (1,2,3,4)\n");
@@ -188,6 +193,44 @@ class Program
 
     }
 
+
+    public static void KitapOduncDegistir(List<Kitap> kitaplar) 
+    {
+        if (kitaplar.Count == 0)
+        {
+            Console.Write("\nListe boş\n");
+            return;
+        }
+
+        string? inputId;
+        int id;
+        do 
+        {
+            Console.Write("\nId:");
+            inputId = Console.ReadLine();
+        } 
+        while (!int.TryParse(inputId, out id));
+
+        bool bulunan = false;
+        foreach (var k in kitaplar) 
+        {
+            if (k.Id == id)
+            {
+                k.OduncteMi = !k.OduncteMi;
+                Console.WriteLine($"\nTamamlandı ödünç durumu : {(k.OduncteMi ? "evet" : "hayır")}");
+                bulunan = true;
+                break;
+            }
+
+        }
+
+        if(bulunan is false) 
+        {
+            Console.WriteLine("\n Kitap Bulunamadı");
+            return;
+        }
+
+    }
 
 
 
