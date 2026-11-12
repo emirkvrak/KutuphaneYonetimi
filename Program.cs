@@ -104,7 +104,7 @@ class Program
             Console.Write("\nFiyat:");
             string? input = Console.ReadLine();
 
-            if (decimal.TryParse(input, out fiyat)) 
+            if (decimal.TryParse(input, out fiyat) && fiyat >= 0)
             {
                 break;
             }
