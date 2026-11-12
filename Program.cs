@@ -223,7 +223,7 @@ class Program
             if (k.Id == id)
             {
                 k.OduncteMi = !k.OduncteMi;
-                Console.WriteLine($"\nTamamlandı ödünç durumu : {(k.OduncteMi ? "evet" : "hayır")}");
+                Console.WriteLine($"\n{k.Ad} {(k.OduncteMi ? "ödünç verildi" : "iade alındı")}\n");
                 bulunan = true;
                 break;
             }
@@ -232,7 +232,7 @@ class Program
 
         if(bulunan is false) 
         {
-            Console.WriteLine("\n Kitap Bulunamadı");
+            Console.WriteLine("\nBöyle bir kitap yok\n");
             return;
         }
 
