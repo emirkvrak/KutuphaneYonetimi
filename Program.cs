@@ -72,12 +72,24 @@ class Program
 
         
         Console.WriteLine("\nLütfen sırasıyla eklemek istediğiniz kitabın bilgilerini girin:\n");
+        
+        string? ad;
+        do 
+        {
+            Console.Write("\nAd:");
+            ad = Console.ReadLine();
+        } 
+        while (string.IsNullOrWhiteSpace(ad));
 
-        Console.Write("\nAd:");
-        string? ad = Console.ReadLine();
 
-        Console.Write("\nYazar:");
-        string? yazar = Console.ReadLine();
+        string? yazar;
+        do
+        {
+            Console.Write("\nYazar:");
+            yazar = Console.ReadLine();
+        }
+        while (string.IsNullOrWhiteSpace(yazar));
+
 
         decimal fiyat = 0.0m;
         while (true) 
