@@ -37,7 +37,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("\nGeçerli bir rakam girin (1,2,3,4)\n");
+                Console.WriteLine("\nGeçerli bir rakam girin (1,2,3,4,5)\n");
                 continue;
             }
 
@@ -65,7 +65,7 @@ class Program
                     Console.WriteLine("\n5.Çıkış seçtiniz\n");
                     return;
                 default:
-                    Console.WriteLine("\nGeçerli bir rakam girin (1,2,3,4)\n");
+                    Console.WriteLine("\nGeçerli bir rakam girin (1,2,3,4,5)\n");
                     break;
 
             }
