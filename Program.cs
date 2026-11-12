@@ -120,12 +120,12 @@ class Program
             Console.Write("\nBirisine ödünç verildi mi? (E, H):");
             string? input2 = Console.ReadLine();
 
-            if (input2 == "E")
+            if (string.Equals(input2, "E", StringComparison.OrdinalIgnoreCase))
             { 
                 oduncteMi = true;
                 break;
             }
-            else if (input2 == "H")
+            else if (string.Equals(input2, "H", StringComparison.OrdinalIgnoreCase))
             { 
                 oduncteMi = false;
                 break;
