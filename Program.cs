@@ -172,7 +172,7 @@ class Program
 
 
         Console.Write("\nAd:");
-        string? ad = Console.ReadLine();
+        string? ad = Console.ReadLine()?.Trim();
 
 
         bool bulunduMu = false;
