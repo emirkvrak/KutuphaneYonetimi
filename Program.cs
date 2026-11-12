@@ -236,7 +236,7 @@ class Program
 
     public static void KitapYazdir(Kitap k) {
 
-        Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
+        Console.WriteLine($"Id: {k.Id},\nAd: {k.Ad},\nYazar: {k.Yazar},\nFiyat: {k.Fiyat:N2},\nÖdünçte mi: {(k.OduncteMi ? "evet" : "hayır")}\n");
     }
 
 
