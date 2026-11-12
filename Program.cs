@@ -204,14 +204,18 @@ class Program
             return;
         }
 
-        string? inputId;
         int id;
-        do 
+        while (true)
         {
             Console.Write("\nId:");
-            inputId = Console.ReadLine();
-        } 
-        while (!int.TryParse(inputId, out id));
+
+            if (int.TryParse(Console.ReadLine(), out id))
+            {
+                break;
+            }
+
+            Console.WriteLine("Geçersiz Id, bir tam sayı girin.");
+        }
 
         bool bulunan = false;
         foreach (var k in kitaplar) 
