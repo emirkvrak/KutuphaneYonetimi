@@ -85,6 +85,7 @@ class Program
             ad = Console.ReadLine();
         } 
         while (string.IsNullOrWhiteSpace(ad));
+        ad = ad.Trim();
 
 
         string? yazar;
@@ -94,6 +95,7 @@ class Program
             yazar = Console.ReadLine();
         }
         while (string.IsNullOrWhiteSpace(yazar));
+        yazar = yazar.Trim();
 
 
         decimal fiyat = 0.0m;
